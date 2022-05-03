@@ -14,3 +14,7 @@ print([i**2 for i in lst if i > 5])
 
 tp = ("apple", "banana", "orange")
 print([len(i) for i in tp])
+#딕셔너리
+d = {100:"apple", 200:"orange"}
+print([v.upper() for v in d.values()])
+
