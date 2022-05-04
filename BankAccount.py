@@ -11,6 +11,7 @@ class BankAccount:
         self.__balance += amount 
     def withdraw(self, amount):
         self.__balance -= amount
+    #블럭을 주석처리: ctrl + / 
     def __str__(self):
         return "{0}, {1}, {2}".format(self.__id, 
         self.__name, self.__balance)
