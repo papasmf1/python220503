@@ -26,8 +26,14 @@ for item in lst:
 
 f.close() 
 
-#with절을 같이 사용
-with open("c:\\work\\text.txt", encoding="utf-8") as f:
-    for item in f.readline():
-        print(item.replace("\n"))
+#with절을 같이 사용(close()메서드를 자동 호출)
+print("---with키워드---")
+with open("c:\\work\\test.txt", encoding="utf-8") as f:
+    result = f.readline()
+    while result != '':
+        print(result, end="")
+        result = f.readline() 
+
+
+
 
