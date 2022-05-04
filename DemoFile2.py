@@ -22,6 +22,12 @@ f.seek(0)
 lst = f.readlines() 
 print(lst)
 for item in lst:
-    print(item)
+    print(item, end="")
 
 f.close() 
+
+#with절을 같이 사용
+with open("c:\\work\\text.txt", encoding="utf-8") as f:
+    for item in f.readline():
+        print(item.replace("\n"))
+
