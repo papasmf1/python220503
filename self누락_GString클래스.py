@@ -10,7 +10,7 @@ class GString:
         self.str = msg
     def print(self):
         #약간의 버그(파이썬은 모호한 것 보다는 명확한 것이 좋다!) 
-        print(str)
+        print(self.str)
 #인스턴스 생성
 g = GString()
 g.set("First Message")
