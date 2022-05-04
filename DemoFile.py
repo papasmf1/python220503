@@ -11,3 +11,14 @@ f = open("c:/work/demo.txt", "wt")
 print("file write", file=f)
 f.close()
 
+#구구단 출력
+for x in range(1,6):
+    print(x,"*",x,"=",x*x)
+
+print("---약간 보정---")
+for x in range(1,6):
+    print(x,"*",x,"=", str(x*x).rjust(3))
+
+print("---약간 보정---")
+for x in range(1,6):
+    print(x,"*",x,"=",str(x*x).zfill(5))
