@@ -17,7 +17,10 @@ soup = BeautifulSoup(page, "html.parser")
 
 #내부 문자열만 리턴
 for tag in soup.find_all("p"):
+    #태그 내부의 컨텐츠만(.text속성)
     title = tag.text.strip()
+    title = title.replace("\n", "")
+    title = title.replace("\t", "")
     print(title)
 
 
