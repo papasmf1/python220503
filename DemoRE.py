@@ -24,7 +24,8 @@ s = """여러줄로
 데이터를 저장하는
 
 이런경우"""
-c = re.compile("^.+")
+#옵션을 지정
+c = re.compile("^.+", re.M)
 print(c.findall(s))
 
 
