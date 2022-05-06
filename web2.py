@@ -13,7 +13,14 @@ data = urllib.request.urlopen(
 soup = BeautifulSoup(data, "html.parser")
 
 cartoons = soup.find_all("td", class_="title")
+print("개수:{0}".format(len(cartoons)))
+#슬라이싱
+#중단점 추가
 title = cartoons[0].find("a").text 
 link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
+
+for tag in cartoons:
+    title = tag.find("a")
+    print(title.text.strip())
