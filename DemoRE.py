@@ -15,6 +15,17 @@ print(bool(re.search("\d{5}", "우리동네는 52300입니다.")))
 result = re.search("\d{5}", "우리동네는 52300입니다.")
 print(result.group())
 
+#대소문자 구분
+s = "Apple is big company and apple is very delicious"
+c = re.compile("apple", re.I)
+print(c.findall(s))
+#다중라인인 경우
+s = """여러줄로
+데이터를 저장하는
+
+이런경우"""
+c = re.compile("^.+")
+print(c.findall(s))
 
 
 
